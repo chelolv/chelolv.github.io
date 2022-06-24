@@ -49,6 +49,18 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-primario);
+}
+
+.contenedor {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .centrado {
   width: var(--ancho-centrado);
 }
@@ -64,6 +76,7 @@ body {
 
 .contenido {
   padding: 2em calc((100% - var(--ancho-centrado)) / 2);
+  flex: 1;
 }
 
 .titulo {
@@ -94,4 +107,38 @@ body {
 }
 .tema_oscuro .boton_tema .fa-moon {
   display: block;
+}
+
+.pie {
+  padding: 2em calc((100% - var(--ancho-centrado)) / 2);
+  display: flex;
+  background-color: var(--color-fondo-cabecera);
+  color: var(--color-texto);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+}
+
+
+.listado_tarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2em;
+}
+
+.tarjeta {
+  padding: 2em;
+  background-color: var(--color-fondo-cabecera);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+.tarjeta .tit {
+  color: var(--color-primario);
+}
+
+.tarjeta img {
+  filter: drop-shadow(0 0 16px var(--color-texto));
 }
